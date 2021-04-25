@@ -11,14 +11,17 @@ description = [[
 
 author = "seaung"
 
-portrule = shortport.http
+license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
+categories = { "ruijie", "vuln-detect" }
+
+portrule = shortport.port_or_service({80, 443, 8000, 8080, 8443}, { "http", "https" }, "tcp", "open")
 
 action = function(host, port)
 	local output = stdnse.output_table()
 	local admin_txt = "super_admin"
 	local pass_txt = "password"
 	options["headers"]["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
-	local response = http.get(host, port)
+	local response = http.get(host, port, options)
 
 	if string.find(response.body, admin_txt) ~= nil and string.find(response.body, pass_txt) ~= nil and response.status == 200 then
 		output = "[+] Found vulnerable"

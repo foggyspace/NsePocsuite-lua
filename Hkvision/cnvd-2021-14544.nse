@@ -12,7 +12,11 @@ description = [[
 author = "seaung"
 
 
-portrule = shortport.http
+license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
+categories = { "hkvision", "vuln-detect" }
+
+
+portrule = shortport.port_or_service({ 80, 443, 8000, 8080, 8443, 9000, 9001, 9090 }, { "http", "https" }, "tcp", "open")
 
 
 action = function(host, port)

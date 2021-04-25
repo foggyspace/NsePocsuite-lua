@@ -11,15 +11,18 @@ description = [[
 
 author = "seaung"
 
+license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
+categories = { "Novo", "vuln-detect" }
+
 portrule = shortport.http
 
 action = function(host, port)
-    local url = "/device.rsp?opt=user&cmd=list"
+    local path = "/device.rsp?opt=user&cmd=list"
     local output = stdnse.output_table()
     local options = {headers={}}
     options["headers"]["cookie"] = "uid=admin"
 
-    local response = http.get(host, port, url, options)
+    local response = http.get(host, port, path, options)
 
     if response.status == 200 then
         if string.find(response.body, "admin") ~= nil and string.find(response.body, "pwd") ~= nil then

@@ -9,6 +9,11 @@ description = [[
 未认证远程获取用户/密码
 ]]
 
+author = "seaung"
+
+license = "Same as Nmap--See https://namp.org/book/man-legal.html"
+categories = { "LG", "vuln-detect" }
+
 portrule = shortport.http
 
 
