@@ -1,7 +1,7 @@
-local http require "http"
-local string require "string"
-local stdnse require "stdnse"
-local shortport require "shortport"
+local http = require "http"
+local string = require "string"
+local stdnse = require "stdnse"
+local shortport = require "shortport"
 
 
 description = [[
@@ -20,8 +20,9 @@ action = function(host, port)
 	local output = stdnse.output_table()
 	local admin_txt = "super_admin"
 	local pass_txt = "password"
-	options["headers"]["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
-	local response = http.get(host, port, options)
+	local options = {headers={}}
+	options["headers"]["user-agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+	local response = http.get(host, port, "/", options)
 
 	if string.find(response.body, admin_txt) ~= nil and string.find(response.body, pass_txt) ~= nil and response.status == 200 then
 		output = "[+] Found vulnerable"

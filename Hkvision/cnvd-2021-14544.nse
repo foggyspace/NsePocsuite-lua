@@ -17,7 +17,6 @@ categories = { "hkvision", "vuln-detect" }
 
 portrule = shortport.port_or_service({ 80, 443, 4444, 8000, 8080, 8443, 9000, 9001, 9090 }, { "http", "https" }, "tcp", "open")
 
---print("start...")
 
 action = function(host, port)
 	local output = stdnse.output_table()

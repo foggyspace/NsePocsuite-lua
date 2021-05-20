@@ -1,7 +1,7 @@
-local http require "http"
-local string require "string"
-local stdnse require "stdnse"
-local shortport require "shorport"
+local http = require "http"
+local string = require "string"
+local stdnse = require "stdnse"
+local shortport =  require "shortport"
 
 
 description = [[
@@ -22,15 +22,13 @@ portrule = shortport.http
 
 action = function(host, port)
     local output = stdnse.output_table()
-    local url = "/etc/passwd"
-    local response = http.get(host, port, url)
+    local path = "/etc/passwd"
+    local response = http.get(host, port, path)
 
-    if response.status == 200 then
-        if string.find(response.body, "root") ~= nil then
-            output = "[+] Found vulnerable."
-        else
-            output = "[-] Not Found vulnerable."
-        end
+    if response.status == 200 and string.find(response.body, "root") ~= nil then
+        output = "[+] Found vulnerable."
+    else
+        output = "[-] Not Found vulnerable."
     end
     return output
 end

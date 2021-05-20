@@ -1,7 +1,7 @@
-local http require "http"
-local string require "string"
-local stdnse require "stdnse"
-local shortport require "shortport"
+local http = require "http"
+local string = require "string"
+local stdnse = require "stdnse"
+local shortport = require "shortport"
 
 description = [[
     Desc:Novo DVR存在凭证泄露问题，
@@ -24,14 +24,12 @@ action = function(host, port)
 
     local response = http.get(host, port, path, options)
 
-    if response.status == 200 then
-        if string.find(response.body, "admin") ~= nil and string.find(response.body, "pwd") ~= nil then
-            stdnse.debug1("[+] found vulnerable.")
-            output = "[+] Found vulnerable."
-        else
-            stdnse.debug1("[-] not found vulnerable.")
-            output = "[-] Not Found vulnerable."
-        end
+    if response.status == 200 and string.find(response.body, "admin") ~= nil and string.find(response.body, "pwd") ~= nil then
+        --stdnse.debug1("[+] found vulnerable.")
+        output = "[+] Found vulnerable."
+    else
+        --stdnse.debug1("[-] not found vulnerable.")
+        output = "[-] Not Found vulnerable."
     end
     return output
 end
