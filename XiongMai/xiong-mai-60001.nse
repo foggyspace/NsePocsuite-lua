@@ -6,17 +6,13 @@ local shortport = require "shortport"
 author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"yd_vul_xiongmai_60001"}
-
+categories = {"xiongmai_60001"}
 
 description = [[
 雄迈视频设备存在后台管理页面，端口60001，易受到口令爆破攻击。
 ]]
 
-
 portrule = shortport.port_or_service( {60001}, {"http", "https"}, "tcp", "open")
---portrule = shortport.port_or_service( {60001}, "tcp", "open")
-
 
 action = function(host, port)
 	local output = stdnse.output_table()
