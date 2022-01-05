@@ -10,7 +10,7 @@ description = [[
 
 author = "seaung"
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"hik_7088_post"}
+categories = { "hikvision", "hikvision_7088_post", "vuln_detect" }
 
 portrule = shortport.port_or_service( {7788,7288}, {"http", "https"}, "tcp", "open")
 

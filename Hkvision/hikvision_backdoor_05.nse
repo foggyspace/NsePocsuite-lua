@@ -13,7 +13,7 @@ Hikvision IP Camera versions 5.2.0 - 5.3.9 (Builds 140721 < 170109) - 访问控�
 author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"hikvision_backdoor_05"}
+categories = { "hikvision", "hikvision_backdoor_05", "vuln_detect" }
 
 portrule = shortport.port_or_service( {80, 443}, {"http", "https"}, "tcp", "open")
 

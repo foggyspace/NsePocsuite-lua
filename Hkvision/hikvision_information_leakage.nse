@@ -12,7 +12,7 @@ Hikvision DV 泄露web版本信息
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
 
-categories = {"hikvision_information_leakage"}
+categories = { "hikvision", "hikvision_information_leakage", "vuln_detect" }
 
 portrule = shortport.port_or_service( {80, 443}, {"http", "https"}, "tcp", "open")
 

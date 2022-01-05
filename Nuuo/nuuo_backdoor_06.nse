@@ -6,7 +6,7 @@ local shortport = require "shortport"
 author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"nuuo_backdoor_06"}
+categories = { "Nuuo", "nuuo_backdoor_06", "vuln_detect" }
 
 
 description = [[

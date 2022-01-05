@@ -6,7 +6,7 @@ local shortport = require "shortport"
 author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"xiongmai_60001"}
+categories = { "xiongmai", "xiongmai_60001", "vuln_detect" }
 
 description = [[
 雄迈视频设备存在后台管理页面，端口60001，易受到口令爆破攻击。

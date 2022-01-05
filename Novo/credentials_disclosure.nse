@@ -12,7 +12,7 @@ description = [[
 author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = { "Novo", "vuln-detect" }
+categories = { "Novo", "credentials_disclosure", "vuln-detect" }
 
 portrule = shortport.http
 

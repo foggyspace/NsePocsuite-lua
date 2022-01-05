@@ -15,7 +15,7 @@ author = "seaung"
 
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"uniview_infoleak_01"}
+categories = { "uniview", "uniview_infoleak_01", "vuln_detect" }
 
 portrule = shortport.port_or_service( {80, 443}, {"http", "https"}, "tcp", "open")
 

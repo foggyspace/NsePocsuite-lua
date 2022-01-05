@@ -6,7 +6,7 @@ local shortport = require "shortport"
 author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"cam_directorytraveral_03"}
+categories = { "CAM", "cam_directorytraveral_03", "vuln_detect" }
 
 description = [[
 CVE:CVE-2014-1900

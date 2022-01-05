@@ -16,7 +16,7 @@ author = "seaung"
 
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"uniview_dvr_nvr_rce_03"}
+categories = { "uniview", "uniview_dvr_nvr_rce_03", "vuln_detect" }
 
 portrule = shortport.port_or_service( {80, 443}, {"http", "https"}, "tcp", "open")
 

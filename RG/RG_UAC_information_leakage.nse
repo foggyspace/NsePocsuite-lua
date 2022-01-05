@@ -12,7 +12,7 @@ description = [[
 author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = { "ruijie", "vuln-detect" }
+categories = { "ruijie", "RG_UAC_information_leakage", "vuln_detect" }
 
 portrule = shortport.port_or_service({80, 443, 8000, 8080, 8443}, { "http", "https" }, "tcp", "open")
 

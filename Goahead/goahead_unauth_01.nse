@@ -12,7 +12,7 @@ author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
 
-categories = {"goahead_unauth_01"}
+categories = { "goahead", "goahead_unauth_01", "vuln_detect" }
 
 portrule = shortport.port_or_service( {80, 443}, {"http", "https"}, "tcp", "open")
 
