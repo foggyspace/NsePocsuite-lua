@@ -4,7 +4,7 @@
 
 #### 怎么使用
 
-在使用这些脚本之前,请将scripts.db文件覆盖掉nmap默认的scripts.db文件
+在使用这些脚本之前,请将script.db文件覆盖掉nmap默认的script.db文件
 将所有的脚本放置到namp的脚本目录下
 
 ```
