@@ -12,7 +12,7 @@ author = "seaung"
 
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = { "hkvision", "cnvd-2021-14544", "vuln_detect" }
+categories = { "hikvision", "cnvd-2021-14544", "vuln_detect" }
 
 
 portrule = shortport.port_or_service({ 80, 443, 4444, 8000, 8080, 8443, 9000, 9001, 9090 }, { "http", "https" }, "tcp", "open")

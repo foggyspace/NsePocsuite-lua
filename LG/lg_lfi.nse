@@ -15,7 +15,7 @@ Tested:LG DVR LE6016D
 author = "seaung"
 
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = { "LG", "lg_lfi", "vuln-detect" }
+categories = { "LG", "lg_lfi", "vuln_detect" }
 
 
 portrule = shortport.http

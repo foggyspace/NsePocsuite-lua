@@ -12,7 +12,7 @@ description = [[
 author = "seaung"
 
 license = "Same as Nmap--See https://namp.org/book/man-legal.html"
-categories = { "LG", "lg_infoleak_v1", "vuln-detect" }
+categories = { "LG", "lg_infoleak_v1", "vuln_detect" }
 
 portrule = shortport.http
 
