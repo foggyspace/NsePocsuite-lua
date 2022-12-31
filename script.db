@@ -620,3 +620,4 @@ Entry { filename = "uniview_dvr_nvr_rce_03.nse", categories = { "uniview", "univ
 Entry { filename = "uniview_infoleak_01.nse", categories = { "uniview", "uniview_infoleak_01", "vuln_detect" } }
 Entry { filename = "uniview_rce_02.nse", categories = { "uniview", "uniview_rce_02", "vuln_detect" } }
 Entry { filename = "xiong-mai-60001.nse", categories = { "xiongmai", "xiongmai_60001", "vuln_detect" } }
+Entry { filename = "gb28181_nodetect.nse", categories = { "GB28181", "GB28181_nodetect", "vuln_detect" } }
