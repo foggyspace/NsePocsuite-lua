@@ -621,3 +621,6 @@ Entry { filename = "uniview_infoleak_01.nse", categories = { "uniview", "uniview
 Entry { filename = "uniview_rce_02.nse", categories = { "uniview", "uniview_rce_02", "vuln_detect" } }
 Entry { filename = "xiong-mai-60001.nse", categories = { "xiongmai", "xiongmai_60001", "vuln_detect" } }
 Entry { filename = "gb28181_nodetect.nse", categories = { "GB28181", "GB28181_nodetect", "vuln_detect" } }
+Entry { filename = "velotismart_directory_traversal.nse", categories = { "velotismart_directory_traversal", "vuln_detect" } }
+Entry { filename = "onvif_post_timecomparion.nse", categories = { "onvif_post_timecomparion", "vuln_detect" } }
+Entry { filename = "onvif_anonymouse_access_detect.nse", categories = { "onvif_anonymouse_access_detect", "vuln_detect" } }
